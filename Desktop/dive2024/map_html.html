@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Page</title>
+    <link rel="stylesheet" href="map_css.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfBrU11k1rgvwY1Lri2O-JaqOV7_dHMis"></script> <!-- Google Maps API 키를 넣으세요 -->
+</head>
+<body>
+    <!-- 컨테이너 시작 -->
+    <div class="container">
+        <!-- 페이지 타이틀 및 메뉴바 -->
+        <div class="header">
+            <!-- 메뉴 버튼 -->
+            <div class="menu-bar">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span> 
+                </div>
+                <!-- 메뉴 항목 -->
+                <div class="menu-items" id="menuItems">
+                    <a href="mypage_html.html">My Page</a>
+                    <a href="map_html.html">Map</a>
+                    <a href="#">Timetable</a>
+                </div>
+            </div>
+
+            <h1 class="title">
+                WORLD <span class="highlight">YOUTH</span> DAY 2027
+            </h1>
+        </div>
+
+        <!-- 지도 상단 필터 버튼 -->
+        <div class="spot-buttons">
+            <button onclick="toggleMarkers('tour')">tour</button>
+            <button onclick="toggleMarkers('event')">event</button>
+            <button onclick="toggleMarkers('historic')">historic</button>
+            <button onclick="toggleMarkers('point')">point</button>
+        </div>
+
+        <!-- 구글 맵 -->
+        <div id="map"></div>
+    </div>
+    <!-- 컨테이너 끝 -->
+
+    <script src="map_js.js"></script> <!-- 외부 JS 파일 -->
+</body>
+</html>

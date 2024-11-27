@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; /* 전체 배경: 연한 회색 */
+}
+
+.container {
+    width: 90%;
+    max-width: 550px; /* 컨테이너 크기를 키움 */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #F2F9FF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    min-height: 500px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px; /* 타이틀과 메뉴 아이콘 사이의 간격 */
+    position: relative;
+    gap: 20px; /* 타이틀과 메뉴바 사이의 간격을 20px로 설정 */
+}
+
+.title {
+    color: #0000FF;
+    font-size: 5vw; /* 반응형 글자 크기 */
+}
+
+.highlight {
+    text-align: center;
+    color: red; /* YOUTH의 색상을 빨간색으로 설정 */
+}
+
+.menu-bar {
+    position: relative;
+}
+
+.menu-icon {
+    padding: 5px; /* 메뉴 아이콘 패딩 줄이기 */
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px; /* 메뉴 아이콘 너비 */
+    height: 3px; /* 메뉴 아이콘 높이 */
+    margin: 3px; /* 메뉴 아이콘 내부 요소 간격 줄이기 */
+    background-color: black;
+}
+
+.menu-bar:hover .menu-items {
+    display: block;
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* 지도보다 위에 위치하도록 z-index 설정 */
+}
+
+.menu-items a {
+    display: block;
+    margin: 5px 0;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.spot-buttons {
+    text-align: center;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center; /* 버튼들을 중앙에 배치 */
+    gap: 5px; /* 버튼 사이 간격을 5px로 설정 */
+}
+
+.spot-buttons button {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 3vw; /* 버튼 글자 크기 반응형 */
+}
+
+
+#map {
+    width: 100%;
+    height: 450px; 
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 화면 크기에 따라 글자 크기 조정 (미디어 쿼리) */
+@media (min-width: 600px) {
+    .title {
+        font-size: 24px; /* 화면이 클 경우 글자 크기를 고정 */
+    }
+
+    .spot-buttons button {
+        font-size: 14px; /* 큰 화면에서 버튼 글자 크기 고정 */
+    }
+}

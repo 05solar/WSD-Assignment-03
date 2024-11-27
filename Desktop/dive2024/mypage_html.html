@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="mypage_css.css">
+</head>
+<body>
+    <!-- 컨테이너 시작 -->
+    <div class="container">
+        <!-- 페이지 타이틀 및 메뉴바 -->
+        <div class="header">
+            <!-- 메뉴 버튼 -->
+            <div class="menu-bar">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span> 
+                </div>
+                <!-- 메뉴 항목 -->
+                <div class="menu-items" id="menuItems">
+                    <a href="mypage_html.html">My Page</a>
+                    <a href="map_html.html">Map</a>
+                    <a href="#">Timetable</a>
+                </div>
+            </div>
+
+            <h1 class="title">
+                WORLD <span class="highlight">YOUTH</span> DAY 2027
+            </h1>
+        </div>
+
+        <!-- 마이페이지 콘텐츠 -->
+        <div class="mypage-content">
+            <div class="profile">
+                <p><strong>Nick name</strong></p>
+                <p>country: paris</p>
+                <div class="profile-pic"></div>
+            </div>
+            <div class="point-section">
+                <div class="point-icon">💰</div>
+                <div class="point-text">
+                    <p><strong>Point</strong></p>
+                    <p class="point-value">100</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 컨테이너 끝 -->
+
+    <script src="mypage_js.js"></script> <!-- 메뉴 기능을 위한 JS 파일 -->
+</body>
+</html>

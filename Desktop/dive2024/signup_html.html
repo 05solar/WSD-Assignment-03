@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - WYD Seoul 2027</title>
+    <link rel="stylesheet" href="signup_css.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-text">
+            <h1>Create Account</h1>
+        </div>
+        <form class="sign-up-form">
+            <div class="input-group">
+                <label for="country">Country</label>
+                <select id="country">
+                    <option value="" disabled selected>country</option>
+                    <option value="us">United States</option>
+                    <option value="kr">Korea</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="language">Language</label>
+                <select id="language">
+                    <option value="" disabled selected>language</option> 
+                    <option value="en">English</option>
+                    <option value="ko">Korean</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="region">Region</label>
+                <select id="region">
+                    <option value="" disabled selected>current region</option> 
+                    <option value="seoul">Seoul</option>
+                    <option value="busan">Busan</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@gmail.com">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="example1234">
+            </div>
+            <button type="submit" class="sign-up-button">Sign up</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; /* 전체 배경: 연한 회색 */
+}
+
+.container {
+    width: 90%;
+    max-width: 550px; /* 컨테이너 크기를 키움 */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #F2F9FF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    min-height: 500px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px; /* 타이틀과 메뉴 아이콘 사이의 간격 */
+    position: relative;
+    gap: 20px; /* 타이틀과 메뉴바 사이의 간격을 20px로 설정 */
+}
+
+.title {
+    color: #0000FF;
+    font-size: 5vw; /* 반응형 글자 크기 */
+}
+
+.highlight {
+    text-align: center;
+    color: red; /* YOUTH의 색상을 빨간색으로 설정 */
+}
+
+.menu-bar {
+    position: relative;
+}
+
+.menu-icon {
+    padding: 5px; /* 메뉴 아이콘 패딩 줄이기 */
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px; /* 메뉴 아이콘 너비 */
+    height: 3px; /* 메뉴 아이콘 높이 */
+    margin: 3px; /* 메뉴 아이콘 내부 요소 간격 줄이기 */
+    background-color: black;
+}
+
+.menu-bar:hover .menu-items {
+    display: block;
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* 지도보다 위에 위치하도록 z-index 설정 */
+}
+
+.menu-items a {
+    display: block;
+    margin: 5px 0;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* 마이페이지 콘텐츠 스타일 */
+.mypage-content {
+    text-align: left;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+
+.point-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #000;
+    padding-top: 10px;
+}
+
+.point-icon {
+    font-size: 24px;
+}
+
+.point-text {
+    text-align: right;
+}
+
+.point-value {
+    font-size: 24px;
+    font-weight: bold;
+}
