@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="emerald">#4EE1C9</color>
+    <color name="beige">#F8F4E3</color>
+    <color name="colorPrimary">#F3F9FB</color>
+    <color name="colorPrimaryDark">#D7D7D7</color>
+    <color name="colorAccent">#51E3D4</color>
+    <color name="colorIndigo">#474F85</color>
+    <color name="colorPrimaryLittleDark">#E2E8EA</color>
+    <color name="colorBackground">#F3F9FB</color>
+    <color name="colorTextPrimary">#000000</color>
+    <color name="mypageBackground">#F5F0CD</color>
+</resources>
