@@ -179,21 +179,48 @@ jobApp.get('/jobs', async (req, res) => {
 });
 
 // 채용공고 상세 조회
-jobApp.get('/jobs/:id', async (req, res) => {
-  const { id } = req.params;
-
-  try {
-    const [rows] = await db.execute('SELECT * FROM jobs WHERE job_id = ?', [id]);
-    if (rows.length === 0) {
-      return res.status(404).json({ error: 'Job not found' });
+// 채용공고 목록 조회 (페이지네이션 추가)
+jobApp.get('/jobs', async (req, res) => {
+    const { search, filter, sort, page = 1, size = 20 } = req.query;
+  
+    let query = 'SELECT * FROM jobs WHERE 1=1';
+    const params = [];
+  
+    // 검색 조건 추가
+    if (search) {
+      query += ' AND title LIKE ?';
+      params.push(`%${search}%`);
     }
-    res.json(rows[0]);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Failed to fetch job' });
-  }
-});
-
+  
+    // 필터 조건 추가
+    if (filter) {
+      query += ' AND employment_type = ?';
+      params.push(filter);
+    }
+  
+    // 정렬 조건 추가
+    if (sort) {
+      query += ` ORDER BY ${sort}`;
+    }
+  
+    // 페이지네이션 처리
+    const offset = (page - 1) * size;
+    query += ' LIMIT ? OFFSET ?';
+    params.push(parseInt(size, 10), parseInt(offset, 10));
+  
+    try {
+      const [rows] = await db.execute(query, params);
+      res.json({
+        page: parseInt(page, 10),
+        size: parseInt(size, 10),
+        data: rows,
+      });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Failed to fetch jobs' });
+    }
+  });
+  
 // 채용공고 추가
 jobApp.post('/jobs', async (req, res) => {
   const { title, description, requirements, salary } = req.body;
